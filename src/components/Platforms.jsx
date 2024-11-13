@@ -4,8 +4,8 @@ import ar from "../../src/assets/AR.png";
 import frame from "../../src/assets/Frame.png";
 const Platforms = () => {
   return (
-    <div className="container p-4 mx-auto mt-[5.0rem] flex flex-col items-center justify-center">
-      <div className="text-center">
+    <div className="container w-full mx-auto  mt-[5.0rem] flex flex-col items-center justify-center">
+      <div className="text-center px-4">
         <p className="text-[46px]">
           Multiple Businesses On{" "}
           <span className="text-[#3B6896]">
@@ -33,9 +33,9 @@ const Platforms = () => {
             <strong>Vant for Business</strong>
           </span>
         </p>
-        <div className="flex items-center justify-center gap-[60px] mt-10 bg-[#F9F9F9]">
-          <div>
-            <p className="text-[60px] font-extrabold">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-center gap-[40px]  mt-10 bg-[#F9F9F9] w-full">
+          <div className="width-[50%]">
+            <p className="text-[47px] md:text-[45px] lg:text-[60px] font-extrabold">
               <span className="text-[#302348]">
                 {" "}
                 Share secured links <br /> to receive
@@ -44,13 +44,16 @@ const Platforms = () => {
                 payments <br /> from any where.
               </span>{" "}
             </p>
-            <p className="text-[18px] text-[#373738]">
+            <p className="text-[13px] md:text-[18px] text-[#373738]">
               Get paid easily by sharing a secure, custom payment <br /> link with
               customers across the globe.{" "}
             </p>
           </div>
-          <img src={frame} alt="" width="544px" height="522px" />
+          <img src={frame} alt="" width="500px"/>
         </div>
+      </section>
+      <section className="mt-[100px] bg-[#9CD4C3] w-full">
+        <p>Automate your invoicing process</p>
       </section>
     </div>
   );
