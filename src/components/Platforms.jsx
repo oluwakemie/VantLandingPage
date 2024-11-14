@@ -4,6 +4,7 @@ import ar from "../../src/assets/AR.png";
 import frame from "../../src/assets/Frame.png";
 import frame1 from "../../src/assets/12.png";
 import frame2 from "../../src/assets/21shot.png";
+import Payment from "../../src/assets/Payment.png";
 const Platforms = () => {
   return (
     <div className="container w-full mx-auto  mt-[5.0rem] flex flex-col items-center justify-center">
@@ -54,7 +55,7 @@ const Platforms = () => {
           <img src={frame} alt="" width="500px" />
         </div>
       </section>
-      <section className="mt-[100px] bg-[#9CD4C3] w-full p-10 flex items-center ">
+      <section className="mt-[100px] bg-[#9CD4C3] w-full relative h-[70vh] px-5 flex items-center justify-between ">
         <div className="w-[50%]">
           <p className="text-[60px] text-[#302348] font-bold ">
             Automate your <span className="text-[#FFFFFF]">invoicing</span>{" "}
@@ -80,9 +81,20 @@ const Platforms = () => {
             </svg>
           </div>
         </div>
-        <div className="relative">
-          <img src={frame1} alt="" width="300px" className=""/>
-          <img src={frame2} alt="" width="600px" className="absolute right-0" />
+        <div className="absolute bottom-0 right-0">
+          <img
+            src={frame1}
+            alt=""
+            width="400px"
+            className="absolute z-10 bottom-0 right-9"
+          />
+          <img src={frame2} alt="" width="600px" className="" />
+        </div>
+      </section>
+      <section className="mt-10">
+        {/* <img src={Payment} alt="" /> */}
+        <div>
+          <p>Multi-Account and Currency</p>
         </div>
       </section>
     </div>
