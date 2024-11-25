@@ -4,7 +4,10 @@ import ar from "../../src/assets/AR.png";
 import frame from "../../src/assets/Frame.png";
 import frame1 from "../../src/assets/12.png";
 import frame2 from "../../src/assets/21shot.png";
-import Payment from "../../src/assets/Payment.png";
+import earth from "../../src/assets/earth.png";
+import bitcoin from "../../src/assets/bitcoin.png";
+import bit2 from "../../src/assets/bit2.png";
+
 const Platforms = () => {
   return (
     <div className="container w-full mx-auto  mt-[5.0rem] flex flex-col items-center justify-center">
@@ -91,10 +94,23 @@ const Platforms = () => {
           <img src={frame2} alt="" width="600px" className="" />
         </div>
       </section>
-      <section className="mt-10">
+      <section className="mt-[50px] bg-[#FFBD39] h-[70vh] w-full p-[100px] line-clamp-4 flex justify-between  relative">
         {/* <img src={Payment} alt="" /> */}
-        <div>
-          <p>Multi-Account and Currency</p>
+        <div className="w-[50%]">
+          <p className="text-[64px] font-bold text-[#302348]">Multi-Account and Currency</p>
+          <p className="text-[20px] text-gray-700">Manage multiple accounts, currencies and cards in <br /> one place, without switching platform.</p>
+        </div>
+        <div className="">
+            <div className="absolute top-0 left-0">
+              <img src={bitcoin} alt="" className="" width={250} />
+            </div>
+            <div className="absolute top-5 ">
+              <img src={bit2} alt="" width={250} />
+            </div>
+            <div className="absolute top-5  right-[9.0rem]">
+              <img src={bit2} alt="" width={250} />
+            </div>
+            <img src={earth} alt="" width="500px" className="absolute bottom-0 right-10" />
         </div>
       </section>
     </div>
