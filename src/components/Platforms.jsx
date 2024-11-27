@@ -215,9 +215,9 @@ const Platforms = () => {
         </div>
       </section>
 
-      <section className="md:flex items-center justify-between mt-4">
+      <section className="flex flex-shrink items-center justify-between mt-4">
         <div>
-          <p className="text-[42px] font-bold">More Key Features</p>
+          <p className="text-[30px] md:text-[42px] font-bold">More Key Features</p>
         </div>
         <div>
           <svg
@@ -237,6 +237,9 @@ const Platforms = () => {
             />
           </svg>
         </div>
+      </section>
+      <section>
+        
       </section>
     </div>
   );
