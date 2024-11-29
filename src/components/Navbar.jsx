@@ -16,6 +16,7 @@ const Navbar = () => {
           </ul>
         </nav>
         <div className="">
+          
           <button className="border flex items-center gap-2 text-[#3B6896] px-7 py-3 border-radius rounded-full ">
             <svg
               width="44"

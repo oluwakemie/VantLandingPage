@@ -2,14 +2,16 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Partners from "./components/Partners";
-import Platforms from "./components/Platforms";
+import Business from "./components/Business";
+import Footer from "./components/Footer";
 const App = () => {
   return (
     <div>
-      <Navbar /> 
+      <Navbar />
       <Hero />
-      <Partners/>
-      <Platforms/>
+      <Partners />
+      <Business />
+      <Footer/>
     </div>
   );
 };
