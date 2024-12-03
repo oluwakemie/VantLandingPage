@@ -1,13 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../../src/assets/logo.png";
+import { motion as m } from "framer-motion";
+// import { Link, useLocation } from "react-router-dom";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { AiOutlineClose } from "react-icons/ai";
 const Navbar = () => {
+  const [toggle, setToggle] = useState(true);
+  const [showMenu, setShowMenu] = useState(false);
+  // const location = useLocation();
+
+  const handleToggle = () => {
+    setToggle(!toggle);
+    setShowMenu(!showMenu);
+  };
   return (
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center ">
         <div>
           <img src={Logo} alt="logo" width={140} height={100} />
         </div>
-        <nav className="hidden lg:block">
+        <nav className="hidden md:block">
           <ul className="flex items-center gap-10">
             <li>Personal</li>
             <li>Product</li>
@@ -15,8 +27,7 @@ const Navbar = () => {
             <li>Developer</li>
           </ul>
         </nav>
-        <div className="">
-          
+        <div className="hidden lg:block">
           <button className="border flex items-center gap-2 text-[#3B6896] px-7 py-3 border-radius rounded-full ">
             <svg
               width="44"
@@ -37,7 +48,82 @@ const Navbar = () => {
             <p className="text-sm">Download an App</p>{" "}
           </button>
         </div>
+        <button onClick={handleToggle} className=" md:inline-block lg:hidden">
+          {toggle ? <GiHamburgerMenu /> : <AiOutlineClose />}
+        </button>
       </div>
+      {showMenu && (
+        <m.div
+          initial={{ x: -30, opacity: 0 }}
+          animate={{
+            x: 0,
+            opacity: 1,
+            // scale: 1,
+          }}
+          transition={{
+            duration: 1.2,
+          }}
+          className=" mt-4 absolute top-[82px] flex space-x-3 bg-white h-screen   lg:hidden w-full py-[30px] px-[20px] z-10"
+        >
+          <ul className="flex flex-col space-y-9 text-2xl  mb-2 text-black md:text-4xl ">
+            <li className="cursor-pointer   hover:text-[#1b599b] hover:border-b hover:border-b-lg hover:border-b-[#124072]">
+              Personal
+            </li>
+
+            <li className="cursor-pointer   hover:text-[#1b599b] hover:border-b hover:border-b-lg hover:border-b-[#124072]">
+              Business
+            </li>
+
+            <li className="cursor-pointer   hover:text-[#1b599b] hover:border-b hover:border-b-lg hover:border-b-[#124072]">
+              Products
+            </li>
+
+            <li className="cursor-pointer   hover:text-[#1b599b] hover:border-b hover:border-b-lg hover:border-b-[#124072]">
+              Company
+            </li>
+
+            <li className="cursor-pointer   hover:text-[#1b599b] hover:border-b hover:border-b-lg hover:border-b-[#124072]">
+              Developers
+            </li>
+
+            <li className="cursor-pointer   hover:text-[#1b599b] hover:border-b hover:border-b-lg hover:border-b-[#124072]">
+              Blogs
+            </li>
+
+            <li>
+              {" "}
+              {/* <div className="flex justify-center items-center gap-6 mt-[40px]">
+                <a
+                  href="https://www.google.com/url?q=https://play.google.com/store/apps/details%3Fid%3Dcom.vant.app%26hl%3Den_US%26referrer%3Dutm_source%253Dgoogle%2526utm_medium%253Dorganic%2526utm_term%253Dvant%2Bapp&sa=U&ved=2ahUKEwixkrSIwpqBAxVgU0EAHVPRDAMQFnoECAUQAg&usg=AOvVaw3iL8zaaBsLYYudFsvEMTLY "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="./image/googleplay.png"
+                    alt="google play logo"
+                    className="w-[135px]
+            h-[40px] lg:w-[189px]
+            lg:h-[56px]"
+                  />
+                </a>
+                <a
+                  href="https://apps.apple.com/ng/app/vant-app/id6464392721"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="./image/appstore.png"
+                    alt="app store logo"
+                    className="w-[120px]
+            h-[40px] lg:w-[168px]
+            lg:h-[56px]"
+                  />
+                </a>
+              </div> */}
+            </li>
+          </ul>
+        </m.div>
+      )}
     </div>
   );
 };

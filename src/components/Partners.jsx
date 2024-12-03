@@ -3,7 +3,7 @@ import bank from "../../src/assets/BANK.png";
 import tech from "../../src/assets/TECH.png";
 import Vbank from "../../src/assets/V.png";
 import aws from "../../src/assets/aws.png";
-import { motion } from "framer-motion";
+
 
 const Partners = () => {
   return (
